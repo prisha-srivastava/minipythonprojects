@@ -1,18 +1,25 @@
 
-import random
 
-print("Winning rules of the game-\n"
-        +"Rock vs Paper->Paper wins \n"
-        + "Rock vs Scissor->Rock wins \n"
-        +"paper vs Scissor->Scissor wins \n")
+import random
+import time
+
+print("----------Welcome! Let's play!----------")
+
+time.sleep(2)
+
+print("\n Winning rules of the game :\n"
+        +"# Rock vs Paper-> Paper wins \n"
+        +"# Rock vs Scissor-> Rock wins \n"
+        +"# Paper vs Scissor-> Scissor wins \n")
 
 while(True):
-    print("Enter your choice- \n 1.Rock \n 2.Paper \n 3.Scissors\n")
+    time.sleep(2)
+    print("\n Enter your choice- \n 1.Rock \n 2.Paper \n 3.Scissors\n")
 
-    choice=int(input("Your choice:"))
+    choice=int(input("\n Your choice:"))
 
     while choice>3 or choice<1:
-        choice=int(input("Enter valid choice:"))
+        choice=int(input("\n Enter valid choice:"))
 
     if choice==1:
         choice_name="Rock"
@@ -21,9 +28,11 @@ while(True):
     else:
         choice_name="Scissors"
 
+    time.sleep(2)
     #print user choice
-    print("Your choice is : "+choice_name)
+    print("\n Your choice is : "+choice_name)
 
+    time.sleep(1)
     print("\n <<<<< Now it's computer's turn >>>>")
 
     #random number chosen by computer
@@ -37,6 +46,7 @@ while(True):
     else:
         comp_choice_name="Scissors"
 
+    time.sleep(2)
     print("\n Computer's choice is :" + comp_choice_name)
 
     #Condition for winning
@@ -54,17 +64,23 @@ while(True):
     else:
         result=""
 
+    time.sleep(2)
+    print("\n Let's see the Results!")
     #Printing the winner
     if result == choice_name:
-        print("<<< CONGRATULATIONS YOU WON! >>>")
+        time.sleep(1)
+        print("\n <<< CONGRATULATIONS YOU WON! >>>")
 
     elif result == comp_choice_name:
-        print("<<< COMPUTER WINS! >>>")
+        time.sleep(1)
+        print("\n <<< COMPUTER WINS! >>>")
 
     else :
-        print("<<< TIE GAME- NO WINNER! >>>" )
+        time.sleep(1)
+        print("\n <<< OOOH...TIE GAME- NO WINNER! >>>" )
         
-    print("\nDo you want to play again? (Y/N)")
+    time.sleep(2)
+    print("\n Do you want to play again? (Y/N)")
     ans=input()
 
     if ans=="n" or ans=="N":
